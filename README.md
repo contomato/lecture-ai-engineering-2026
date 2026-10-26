@@ -28,7 +28,10 @@ AIエンジニアリング実践講座（AIE2026）の演習と宿題で使う�
 ```bash
 uv run pytest -q
 uv run python -m app.ask "LoRAとは何ですか？"
+uv run python -m app.ask --continue "今の説明をもう少し詳しく"
 ```
+
+`-c` / `--continue` を付けると、同じターミナルで直前に実行した質問から会話を続けられます。履歴はユーザーのキャッシュ領域に保存され、履歴を使わない通常実行では新しい会話として始まります。現時点ではターミナルをまたいだ会話の引き継ぎには対応していません。
 
 詳しい手順は [lectures/01/problem.md](lectures/01/problem.md) を見てください。
 
